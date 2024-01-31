@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 import 'package:intl/intl.dart';
 
 class Home extends StatefulWidget {
@@ -9,28 +10,34 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  late String _currentTime;
   double cmToLogicalPixels(double cm) => cm * 14.1;
+  late String _currentTime;
 
   @override
   void initState() {
     super.initState();
     _updateTime();
+    // Timer to update the time every second
+    Timer.periodic(Duration(seconds: 1), (Timer timer) => _updateTime());
   }
-  
+
   void _updateTime() {
-    final now = DateTime.now();
-    final formattedTime = DateFormat('HH:mm:ss').format(now);
+    setState(() {
+      _currentTime = _getCurrentTime();
+    });
   }
 
-  setState(() {
-    _currentTime = fotmattedTime;
-  });
+  String _getCurrentTime() {
+    DateTime now = DateTime.now();
+    String formattedTime =
+        "${_formatTimeComponent(now.hour)}:${_formatTimeComponent(now.minute)}:${_formatTimeComponent(now.second)}";
+    return formattedTime;
+  }
 
-  Future.delayed(const Duration(seconds:1), (){
-    _updateTime();
-  });
-  
+  String _formatTimeComponent(int timeComponent) {
+    return timeComponent < 10 ? '0$timeComponent' : '$timeComponent';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,11 +88,11 @@ class _HomeState extends State<Home> {
       width: MediaQuery.of(context).size.width * 0.5,
       padding: const EdgeInsets.all(16),
       color: Colors.black,
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             "Selamat Datang!",
             style: TextStyle(
               fontSize: 18,
@@ -94,7 +101,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           Text(
-            "15:05:05",
+            _currentTime ?? "Loading...",
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,

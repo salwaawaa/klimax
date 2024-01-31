@@ -70,24 +70,29 @@ class Login extends StatelessWidget {
                         EdgeInsets.symmetric(horizontal: 16, vertical: 17)),
               ),
             ),
-            const SizedBox(
-              height: 45,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/home');
+              },
+              child: SizedBox(
+                height: 45,
+              ),
             ),
             Container(
               width: double.infinity,
               height: 50,
-              margin: const EdgeInsets.symmetric(horizontal: 15),
+              margin: EdgeInsets.symmetric(horizontal: 15),
               child: FilledButton(
                 style: FilledButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+                  backgroundColor: Color.fromARGB(255, 0, 0, 0),
                 ),
                 onPressed: () {},
-                child: const Text(
+                child: Text(
                   'masuk',
                   style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
