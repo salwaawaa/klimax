@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -8,8 +9,28 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  late String _currentTime;
   double cmToLogicalPixels(double cm) => cm * 14.1;
 
+  @override
+  void initState() {
+    super.initState();
+    _updateTime();
+  }
+  
+  void _updateTime() {
+    final now = DateTime.now();
+    final formattedTime = DateFormat('HH:mm:ss').format(now);
+  }
+
+  setState(() {
+    _currentTime = fotmattedTime;
+  });
+
+  Future.delayed(const Duration(seconds:1), (){
+    _updateTime();
+  });
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

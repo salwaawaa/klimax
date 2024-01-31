@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Klimax',
       theme: ThemeData(),
-      initialRoute: '/homeadmin',
+      initialRoute: '/home',
       routes: {
         '/splashScreen': (context) => const SplashScreen(),
         '/home': (context) => const Home(),
