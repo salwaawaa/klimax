@@ -1,14 +1,41 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 
-class Homeadmin extends StatefulWidget {
-  const Homeadmin({Key? key}) : super(key: key);
+class Home_Admin extends StatefulWidget {
+  const Home_Admin({Key? key}) : super(key: key);
 
   @override
-  State<Homeadmin> createState() => _HomeadminState();
+  State<Home_Admin> createState() => _HomeState();
 }
 
-class _HomeadminState extends State<Homeadmin> {
+class _HomeState extends State<Home_Admin> {
   double cmToLogicalPixels(double cm) => cm * 14.1;
+  late String _currentTime;
+
+  @override
+  void initState() {
+    super.initState();
+    _updateTime();
+
+    Timer.periodic(const Duration(seconds: 1), (Timer timer) => _updateTime());
+  }
+
+  void _updateTime() {
+    setState(() {
+      _currentTime = _getCurrentTime();
+    });
+  }
+
+  String _getCurrentTime() {
+    DateTime now = DateTime.now();
+    String formattedTime =
+        "${_formatTimeComponent(now.hour)}:${_formatTimeComponent(now.minute)}:${_formatTimeComponent(now.second)}";
+    return formattedTime;
+  }
+
+  String _formatTimeComponent(int timeComponent) {
+    return timeComponent < 10 ? '0$timeComponent' : '$timeComponent';
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,11 +87,11 @@ class _HomeadminState extends State<Homeadmin> {
       width: MediaQuery.of(context).size.width * 0.5,
       padding: const EdgeInsets.all(16),
       color: Colors.black,
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             "Selamat Datang!",
             style: TextStyle(
               fontSize: 18,
@@ -73,8 +100,8 @@ class _HomeadminState extends State<Homeadmin> {
             ),
           ),
           Text(
-            "15:05:05",
-            style: TextStyle(
+            _currentTime ?? "Loading...",
+            style: const TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
               color: Colors.white,
@@ -100,8 +127,7 @@ class _HomeadminState extends State<Homeadmin> {
             children: [
               InkWell(
                 onTap: () {
-                  print("");
-                  // Navigasi atau tindakan lainnya
+                  print("home");
                 },
                 child: Container(
                   width: 150,
@@ -121,10 +147,10 @@ class _HomeadminState extends State<Homeadmin> {
       ),
     );
   }
-
+  
   Widget _gambar() {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(30, 100, 30, 0),
+      padding: const EdgeInsetsDirectional.fromSTEB(55, 120, 55, 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -136,30 +162,32 @@ class _HomeadminState extends State<Homeadmin> {
                 children: [
                   Image.asset(
                     'assets/image/kalender.png',
-                    width: 100,
-                    height: 100,
+                    width: 78,
+                    height: 78,
                   ),
-                  const SizedBox(width: 20),
+                  const SizedBox(
+                    width: 45,
+                  ),
                   const Text(
                     'Jadwal Ronda',
-                    style: TextStyle(fontSize: 24),
+                    style: TextStyle(fontSize: 19),
                   ),
                 ],
               ),
-              SizedBox(
-                width: 20,
+              const SizedBox(
+                width: 45,
               ),
               Column(
                 children: [
                   Image.asset(
                     'assets/image/Data.png',
-                    width: 100,
-                    height: 100,
+                    width: 78,
+                    height: 78,
                   ),
                   const SizedBox(width: 20),
                   const Text(
                     'Data Warga',
-                    style: TextStyle(fontSize: 24),
+                    style: TextStyle(fontSize: 20),
                   ),
                 ],
               )

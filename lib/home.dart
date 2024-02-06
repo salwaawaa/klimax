@@ -127,7 +127,7 @@ class _HomeState extends State<Home> {
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, '/login_user');
+                  Navigator.pushNamed(context, '/login_admin');
                 },
                 child: Container(
                   width: 160,

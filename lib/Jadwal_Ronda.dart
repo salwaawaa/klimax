@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Home_Pencurian extends StatelessWidget {
-  const Home_Pencurian({Key? key}) : super(key: key);
+class Jadwal_Ronda extends StatelessWidget {
+  const Jadwal_Ronda({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class Home_Pencurian extends StatelessWidget {
             const Expanded(
               child: Center(
                 child: Text(
-                  "Pencurian",
+                  "Jadwal Ronda",
                 ),
               ),
             ),
