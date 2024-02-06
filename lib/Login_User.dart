@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class Login_User extends StatelessWidget {
+  const Login_User({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -70,26 +70,26 @@ class Login extends StatelessWidget {
                         EdgeInsets.symmetric(horizontal: 16, vertical: 17)),
               ),
             ),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, '/home');
-              },
-              child: SizedBox(
-                height: 45,
-              ),
+            const SizedBox(
+              height: 20,
             ),
-            Container(
-              width: double.infinity,
-              height: 50,
-              margin: EdgeInsets.symmetric(horizontal: 15),
-              child: FilledButton(
-                style: FilledButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 0, 0, 0),
-                ),
-                onPressed: () {},
-                child: Text(
-                  'masuk',
-                  style: TextStyle(fontSize: 18, color: Colors.white),
+            InkWell(
+              onTap: () {},
+              child: Container(
+                width: double.infinity,
+                height: 50,
+                margin: const EdgeInsets.symmetric(horizontal: 15),
+                child: FilledButton(
+                  style: FilledButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/home');
+                  },
+                  child: const Text(
+                    'masuk',
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  ),
                 ),
               ),
             ),

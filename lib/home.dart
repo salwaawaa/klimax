@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:intl/intl.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -17,8 +16,8 @@ class _HomeState extends State<Home> {
   void initState() {
     super.initState();
     _updateTime();
-    // Timer to update the time every second
-    Timer.periodic(Duration(seconds: 1), (Timer timer) => _updateTime());
+
+    Timer.periodic(const Duration(seconds: 1), (Timer timer) => _updateTime());
   }
 
   void _updateTime() {
@@ -95,15 +94,15 @@ class _HomeState extends State<Home> {
           const Text(
             "Selamat Datang!",
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 25,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
           ),
           Text(
             _currentTime ?? "Loading...",
-            style: TextStyle(
-              fontSize: 20,
+            style: const TextStyle(
+              fontSize: 24,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
@@ -128,18 +127,20 @@ class _HomeState extends State<Home> {
             children: [
               InkWell(
                 onTap: () {
-                  print("");
-                  // Navigasi atau tindakan lainnya
+                  Navigator.pushNamed(context, '/login_user');
                 },
                 child: Container(
-                  width: 150,
-                  height: 120,
+                  width: 160,
+                  height: 125,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(1.3),
                   ),
-                  child: Image.asset(
-                    "assets/image/ronda.png",
-                    fit: BoxFit.cover,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(1.3),
+                    child: Image.asset(
+                      "assets/image/ronda.png",
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
@@ -152,7 +153,7 @@ class _HomeState extends State<Home> {
 
   Widget _gambar() {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(55, 120, 55, 0),
+      padding: const EdgeInsetsDirectional.fromSTEB(55, 120, 55, 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -174,7 +175,7 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Column(
@@ -211,7 +212,7 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 25,
               ),
               Column(

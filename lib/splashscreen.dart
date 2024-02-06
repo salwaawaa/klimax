@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:klimax/user.dart';
+import 'package:klimax/Login_User.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -19,9 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(
-            builder: (context) =>
-                const Login()), 
+        MaterialPageRoute(builder: (context) => const Login_User()),
       );
     });
   }
@@ -44,4 +42,3 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-

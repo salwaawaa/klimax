@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:klimax/home.dart';
-import 'package:klimax/homeadmin.dart';
-import 'package:klimax/splashscreen.dart';
-import 'package:klimax/user.dart';
+import 'package:klimax/Home.dart';
+import 'package:klimax/Home_Admin.dart';
+import 'package:klimax/Home_Pencurian.dart';
+import 'package:klimax/Splashscreen.dart';
+import 'package:klimax/Login_User.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,12 +17,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Klimax',
       theme: ThemeData(),
-      initialRoute: '/home',
+      initialRoute: '/home_pencurian',
       routes: {
         '/splashScreen': (context) => const SplashScreen(),
-        '/user': (context) => const Login(),
+        '/login_user': (context) => const Login_User(),
         '/home': (context) => const Home(),
-        '/jadwal': (context) => const MyApp(),
+        '/home_pencurian': (context) => const Home_Pencurian(),
         '/homeadmin': (context) => const Homeadmin(),
       },
     );
