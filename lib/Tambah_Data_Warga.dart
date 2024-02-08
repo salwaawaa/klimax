@@ -95,7 +95,25 @@ class Tambah_Data_Warga extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 350,
+              ),
+              Center(
+                child: Container(
+                  width: 180,
+                  height: 70,
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Submit',
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ),
+                ),
               ),
             ],
           ),

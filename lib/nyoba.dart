@@ -246,48 +246,4 @@ class _HomeState extends State<Home> {
     );
   }
 
-  void _showProfileBottomSheet(BuildContext context) {
-    showModalBottomSheet(
-      context: context,
-      backgroundColor: Colors.black, // Set background color to black
-      builder: (BuildContext context) {
-        return Container(
-          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(height: 20.0),
-              ListTile(
-                leading: Icon(Icons.home,
-                    color: Colors.white), // Set icon color to white
-                title: const Text(
-                  'Beranda',
-                  style:
-                      TextStyle(color: Colors.white), // Set text color to white
-                ),
-                onTap: () {
-                  // Tambahkan aksi yang ingin dilakukan saat item Beranda diklik
-                  Navigator.pop(context); // Tutup bottom sheet
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.calendar_today,
-                    color: Colors.white), // Set icon color to white
-                title: const Text(
-                  'Jadwal',
-                  style:
-                      TextStyle(color: Colors.white), // Set text color to white
-                ),
-                onTap: () {
-                  // Tambahkan aksi yang ingin dilakukan saat item
-                  Navigator.pop(context); // Tutup bottom sheet
-                },
-              ),
-            ],
-          ),
-        );
-      },
-    );
-  }
 }
