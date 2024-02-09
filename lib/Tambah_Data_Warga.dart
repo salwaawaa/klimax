@@ -95,22 +95,49 @@ class Tambah_Data_Warga extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 350,
+                height: 10,
+              ),
+              const Text(
+                "Password",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextField(
+                controller: _alamatController,
+                decoration: InputDecoration(
+                  hintText: "Masukkan password",
+                  hintStyle: const TextStyle(fontSize: 16, color: Colors.grey),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color.fromARGB(255, 5, 3, 6),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color.fromARGB(255, 10, 9, 10),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 120,
               ),
               Center(
                 child: Container(
-                  width: 180,
-                  height: 70,
-                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  width: 150,
+                  height: 50,
                   decoration: BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: const Text(
+                  child: Center(
+                    child: Text(
                       'Submit',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
                   ),
                 ),

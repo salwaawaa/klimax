@@ -21,7 +21,7 @@ class Tambah_Data_Ronda extends StatelessWidget {
               onPressed: () {},
             ),
             const Text(
-              "Jadwal Ronda",
+              "Tambah Data Ronda",
               style: TextStyle(
                 fontSize: 18,
               ),
@@ -40,7 +40,7 @@ class Tambah_Data_Ronda extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                "Nama",
+                "Hari",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal),
               ),
               const SizedBox(
@@ -49,7 +49,7 @@ class Tambah_Data_Ronda extends StatelessWidget {
               TextField(
                 controller: _namaController,
                 decoration: InputDecoration(
-                  hintText: "Masukkan nama",
+                  hintText: "Masukkan Hari",
                   hintStyle: const TextStyle(fontSize: 16, color: Colors.grey),
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(
@@ -69,7 +69,7 @@ class Tambah_Data_Ronda extends StatelessWidget {
                 height: 10,
               ),
               const Text(
-                "Alamat",
+                "Nama",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal),
               ),
               const SizedBox(
@@ -78,7 +78,7 @@ class Tambah_Data_Ronda extends StatelessWidget {
               TextField(
                 controller: _alamatController,
                 decoration: InputDecoration(
-                  hintText: "Masukkan alamat",
+                  hintText: "Masukkan nama",
                   hintStyle: const TextStyle(fontSize: 16, color: Colors.grey),
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(
@@ -95,22 +95,108 @@ class Tambah_Data_Ronda extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 350,
+                height: 5,
+              ),
+              TextField(
+                controller: _alamatController,
+                decoration: InputDecoration(
+                  hintText: "Masukkan nama",
+                  hintStyle: const TextStyle(fontSize: 16, color: Colors.grey),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color.fromARGB(255, 5, 3, 6),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color.fromARGB(255, 10, 9, 10),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              TextField(
+                controller: _alamatController,
+                decoration: InputDecoration(
+                  hintText: "Masukkan nama",
+                  hintStyle: const TextStyle(fontSize: 16, color: Colors.grey),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color.fromARGB(255, 5, 3, 6),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color.fromARGB(255, 10, 9, 10),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              TextField(
+                controller: _alamatController,
+                decoration: InputDecoration(
+                  hintText: "Masukkan nama",
+                  hintStyle: const TextStyle(fontSize: 16, color: Colors.grey),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color.fromARGB(255, 5, 3, 6),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color.fromARGB(255, 10, 9, 10),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              TextField(
+                controller: _alamatController,
+                decoration: InputDecoration(
+                  hintText: "Masukkan nama",
+                  hintStyle: const TextStyle(fontSize: 16, color: Colors.grey),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color.fromARGB(255, 5, 3, 6),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color.fromARGB(255, 10, 9, 10),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 150,
               ),
               Center(
                 child: Container(
-                  width: 180,
-                  height: 70,
-                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  width: 150,
+                  height: 50,
                   decoration: BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: const Text(
+                  child: Center(
+                    child: Text(
                       'Submit',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
                   ),
                 ),

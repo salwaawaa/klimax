@@ -252,14 +252,14 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.black, // Set background color to black
       builder: (BuildContext context) {
         return Container(
-          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
+          padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               ListTile(
-                leading: Icon(Icons.home,
+                leading: const Icon(Icons.home,
                     color: Colors.white), // Set icon color to white
                 title: const Text(
                   'Beranda',
@@ -272,7 +272,7 @@ class _HomeState extends State<Home> {
                 },
               ),
               ListTile(
-                leading: Icon(Icons.calendar_today,
+                leading: const Icon(Icons.calendar_today,
                     color: Colors.white), // Set icon color to white
                 title: const Text(
                   'Jadwal',

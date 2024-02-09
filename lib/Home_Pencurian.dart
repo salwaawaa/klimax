@@ -18,7 +18,7 @@ class Home_PencurianState extends State<Home_Pencurian> {
               onPressed: () {},
               icon: Icon(Icons.arrow_back),
             ),
-            Expanded(
+            const Expanded(
               child: Center(
                 child: Text(
                   "Pencurian",
@@ -40,9 +40,9 @@ class Home_PencurianState extends State<Home_Pencurian> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(height: 10),
-                Center(
+                const Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: Stack(
                       children: [],
                     ),
@@ -70,15 +70,15 @@ class Home_PencurianState extends State<Home_Pencurian> {
                           children: [
                             IconButton(
                               onPressed: () {},
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.search,
                                 size: 30,
                                 color: Colors.black,
                               ),
                             ),
-                            Expanded(
+                            const Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.all(20.0),
+                                padding: EdgeInsets.all(20.0),
                                 child: Text(
                                   "Cari Lokasi",
                                 ),
@@ -331,28 +331,28 @@ class Home_PencurianState extends State<Home_Pencurian> {
                   ),
                 ),
                 Positioned(
-                  bottom: 16, // Menempatkan tombol di bagian bawah
-                  right: 16, // Menempatkan tombol di bagian kanan
-                  child: ElevatedButton(
-                    onPressed: () {
-                      // Tambahkan logika untuk menangani tombol submit
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary: const Color.fromARGB(
-                          255, 7, 7, 7), // Warna latar belakang tombol
-                      textStyle:
-                          TextStyle(fontSize: 16), // Gaya teks dalam tombol
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 20,
-                          vertical: 12), // Padding di dalam tombol
-                      shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(10), // Bentuk sudut tombol
+                  bottom: 16,
+                  right: 60,
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 200), // Tambahkan jarak ke kanan sebesar 20
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // Tambahkan fungsi onPressed sesuai kebutuhan
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: const Color.fromARGB(255, 7, 7, 7),
+                        textStyle: TextStyle(fontSize: 16),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ),
-                    ),
-                    child: Text(
-                      'Submit',
-                      style: TextStyle(color: Colors.white), // Warna teks
+                      child: const Text(
+                        'Submit',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                 ),

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class Nyoba extends StatefulWidget {
+  const Nyoba({Key? key}) : super(key: key);
 
   @override
-  State<Home> createState() => _HomeState();
+  State<Nyoba> createState() => _NyobaState();
 }
 
-class _HomeState extends State<Home> {
+class _NyobaState extends State<Nyoba> {
   double cmToLogicalPixels(double cm) => cm * 14.1;
   late String _currentTime;
 
@@ -42,14 +42,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
       appBar: AppBar(
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: () {
-              _showProfileBottomSheet(context);
-            },
-          ),
-        ],
+        actions: [],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -245,5 +238,4 @@ class _HomeState extends State<Home> {
       ),
     );
   }
-
 }

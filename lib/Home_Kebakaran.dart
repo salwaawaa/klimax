@@ -331,36 +331,29 @@ class Home_KebakaranState extends State<Home_Kebakaran> {
                   ),
                 ),
                 Positioned(
-                  bottom: 16, // Menempatkan tombol di bagian bawah
-                  right: 16, // Menempatkan tombol di bagian kanan
-                  child: Column(
-                    children: [
-                      const SizedBox(
-                          width:
-                              55), // Tambahkan SizedBox di antara Positioned dan ElevatedButton
-                      ElevatedButton(
-                        onPressed: () {
-                          // Tambahkan logika untuk menangani tombol submit
-                        },
-                        style: ElevatedButton.styleFrom(
-                          primary: const Color.fromARGB(
-                              255, 7, 7, 7), // Warna latar belakang tombol
-                          textStyle:
-                              const TextStyle(fontSize: 16), // Gaya teks dalam tombol
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 20,
-                              vertical: 12), // Padding di dalam tombol
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                                10), // Bentuk sudut tombol
-                          ),
-                        ),
-                        child: const Text(
-                          'Submit',
-                          style: TextStyle(color: Colors.white), // Warna teks
+                  bottom: 16,
+                  right: 60,
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 200), // Tambahkan jarak ke kanan sebesar 20
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // Tambahkan fungsi onPressed sesuai kebutuhan
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: const Color.fromARGB(255, 7, 7, 7),
+                        textStyle: TextStyle(fontSize: 16),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                    ],
+                      child: const Text(
+                        'Submit',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
                   ),
                 ),
               ],
