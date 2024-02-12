@@ -15,8 +15,10 @@ import 'package:klimax/Splashscreen.dart';
 import 'package:klimax/Login_User.dart';
 import 'package:klimax/Tambah_Data_Ronda.dart';
 import 'package:klimax/Tambah_Data_Warga.dart';
+// import 'package:firebase_core/firebase_core.dart';
+// import 'firebase_options.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Klimax',
       theme: ThemeData(),
-      initialRoute: '/form_data_ronda',
+      initialRoute: '/login_user',
       routes: {
         //User//
         '/splashScreen': (context) => const SplashScreen(),
